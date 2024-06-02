@@ -112,7 +112,7 @@ Description: {__description__}
 
     args = parser.parse_args()
 
-    with open(args.input_file, 'r') as f:
+    with open(args.input, 'r') as f:
         urls = [line.strip() for line in f if line.strip()]
 
-    main(urls, max_workers=args.max_workers, output_file=args.output_file, output_json=args.json, output_csv=args.csv)
+    main(urls, max_workers=args.workers, output_file=args.output, output_json=args.json, output_csv=args.csv)
